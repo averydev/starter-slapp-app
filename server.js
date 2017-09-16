@@ -30,7 +30,7 @@ I will respond to the following messages:
 
 // response to the user typing "help"
 slapp.message('help', ['mention', 'direct_message'], (msg) => {
-  msg.say("No!");
+  msg.say("No!"); 
 
 })
 
