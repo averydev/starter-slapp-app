@@ -1,10 +1,9 @@
 'use strict'
-
 const express = require('express')
 const Slapp = require('slapp')
 const ConvoStore = require('slapp-convo-beepboop')
 const Context = require('slapp-context-beepboop')
-
+const slack = require('slack')
 // use `PORT` env var on Beep Boop - default to 3000 locally
 var port = process.env.PORT || 3000
 
@@ -31,7 +30,8 @@ I will respond to the following messages:
 
 // response to the user typing "help"
 slapp.message('help', ['mention', 'direct_message'], (msg) => {
-  msg.say(HELP_TEXT)
+  msg.say("No!");
+
 })
 
 // "Conversation" flow that tracks state - kicks off when user says hi, hello or hey
